@@ -12,7 +12,7 @@ How to use:
     <!-- addon.xml -->
     <addon id="your.addon">
         <requires>
-            <import addon="script.module.pydevd" version="4.4.0"/>
+            <import addon="script.module.pydevd" version="10.4.4.0"/>
         </requires>
     </addon>
     ```
@@ -24,7 +24,7 @@ How to use:
     Error Type: <class 'socket.error'>
     Error Contents: [Errno 111] Connection refused
     ```
-    
+
  * Then in the code under test:
 
     ```python

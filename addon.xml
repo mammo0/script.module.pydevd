@@ -1,4 +1,4 @@
-<addon id="script.module.pydevd" name="pydevd" version="4.4.0" provider-name="Fabio Zadrozny, Paul Backhouse">
+<addon id="script.module.pydevd" name="pydevd" version="10.4.4.0" provider-name="Fabio Zadrozny, Paul Backhouse, Marc Ammon">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 	</requires>
