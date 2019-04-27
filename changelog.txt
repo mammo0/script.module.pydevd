@@ -1,3 +1,5 @@
+v10.4.6.1
+- Update PyDevd version to 1.6.1
 v10.4.5.1
 - Update PyDevd version to 1.5.1
 v10.4.4.0
