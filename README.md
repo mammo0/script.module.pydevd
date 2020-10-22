@@ -6,7 +6,7 @@ Kodi support for PyDev debugging in Eclipse/Aptana.
 How to use:
 -----------
 
- * Add script.module.pydevd as a requirement to the module under test:
+ 1. Add script.module.pydevd as a requirement to the module under test:
 
     ```xml
     <!-- addon.xml -->
@@ -16,7 +16,14 @@ How to use:
         </requires>
     </addon>
     ```
- * Start the debug server in Eclipse.
+
+ 2. Then in the code under test add these lines at the beginning:
+    ```python
+    import pydevd
+    pydevd.settrace(stdoutToServer=True, stderrToServer=True, suspend=False)
+    ```
+
+ 3. Start the debug server in Eclipse.
 
     If the debug server is not running when you call settrace then you'll encounter:
 
@@ -25,13 +32,11 @@ How to use:
     Error Contents: [Errno 111] Connection refused
     ```
 
- * Then in the code under test:
+ 4. Set breakpoints in Eclipse.
 
-    ```python
-    import pydevd
-    pydevd.settrace(stdoutToServer=True, stderrToServer=True)
-    ```
- * Use Eclipse debug perspective to move through code.
+    *This step is optional if you omit the `suspend=False` argument in the `pydevd.settrace` function or set it to `True`. Then a breakpoint will be emulated as soon as that function is called.*
+
+ 5. Use Eclipse debug perspective to move through code.
 
 See http://pydev.org/ for details.
 
